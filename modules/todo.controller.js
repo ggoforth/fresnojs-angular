@@ -1,16 +1,11 @@
 angular.module('todo')
   .controller('TodoCtrl', TodoCtrl);
 
-function TodoCtrl() {
+function TodoCtrl(Todos) {
   /**
    * Our app todos.
    * 
    * @type {Array}
    */
-  this.todos = _.map(_.range(10), function (index) {
-    return {
-      title: 'Todo #' + index,
-      complete: false 
-    };
-  });
+  this.todos = Todos.todos;
 }

@@ -1,6 +1,7 @@
 angular.module('todo', [
   'ui.router',
-  'todo.add'
+  'todo.add',
+  'todo.services'
 ])
   .config(function ($stateProvider, $urlRouterProvider) {
     //The default route
