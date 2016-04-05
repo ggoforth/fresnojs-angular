@@ -1,0 +1,18 @@
+<h1>Add Todo</h1>
+<form>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="title">New Todo</label>
+                <input type="text"
+                       ng-model="addTodo.title"
+                       class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button ng-click="addTodo.add(addTodo.title)" class="btn btn-primary">Add Todo</button>
+        </div>
+    </div>
+</form>
