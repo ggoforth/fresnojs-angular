@@ -1,14 +1,16 @@
 angular.module('todo')
   .controller('TodoCtrl', TodoCtrl);
 
-function TodoCtrl($scope) {
-  var vm = this;
-  vm.todos = [];
-
-  _.each(_.range(10), function (todoNum) {
-    vm.todos.push({
-      title: 'Todo #' + todoNum,
+function TodoCtrl() {
+  /**
+   * Our app todos.
+   * 
+   * @type {Array}
+   */
+  this.todos = _.map(_.range(10), function (index) {
+    return {
+      title: 'Todo #' + index,
       complete: false 
-    });
+    };
   });
 }
