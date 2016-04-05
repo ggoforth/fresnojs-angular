@@ -31,7 +31,7 @@ function Todos($q, $timeout) {
       });
       
       dfrd.resolve();
-    }, 3000);
+    }, 1000);
     
     return dfrd.promise;
   };
