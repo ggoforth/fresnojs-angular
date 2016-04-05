@@ -3,8 +3,12 @@ angular.module('todo', [
   'todo.add'
 ])
   .config(function ($stateProvider, $urlRouterProvider) {
+    //The default route
     $urlRouterProvider.otherwise('/todo');
 
+    /**
+     * Our main state...the first thing that is loaded.
+     */
     $stateProvider
       .state('todo', {
         url: '/todo',
