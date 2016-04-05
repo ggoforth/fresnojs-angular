@@ -8,12 +8,9 @@ function AddTodoCtrl(Todos, $state) {
    * @param todo
    */
   this.add = function (todo) {
-    Todos.todos.push({
-      title: todo,
-      complete: false
-    });
-   
-    //go back to the todo state so we can marvel at the wonder of our new todo
-    $state.go('todo');
+    Todos.add(todo)
+      .then(function () {
+        $state.go('todo');
+      });
   };
 }
