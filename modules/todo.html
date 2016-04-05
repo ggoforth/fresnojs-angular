@@ -1,0 +1,10 @@
+<h1>Fresno.js Todo</h1>
+<div class="list-group">
+    <div ng-repeat="todo in todo.todos" class="list-group-item">
+        {{todo.title}}
+
+        <input type="checkbox"
+               ng-checked="todo.complete"
+               class="pull-right">
+    </div>
+</div>
